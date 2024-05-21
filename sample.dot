@@ -1,0 +1,23 @@
+digraph G {
+node [shape=box];
+"InvisibleUnion0" [label="", style=invis, height=0.0, width=0.0];
+"InvisibleUnion" [label="", style=invis, height=0.0, width=0.0];
+"InvisibleUnion1" [label="", style=invis, height=0.0, width=0.0];
+{ rank=same; "Falecido"; "Conjuge"; "InvisibleUnion"; }
+{ rank=same; "Pai"; "Mãe"; "InvisibleUnion0";}
+{ rank=same; "Irmão"; "Cunhada"; "InvisibleUnion1";}
+"Pai" -> "InvisibleUnion0" [dir=none];
+"InvisibleUnion0" -> "Mãe" [dir=none];
+"InvisibleUnion0" -> "Falecido"
+"InvisibleUnion0" -> "Irmão"
+"Irmão" -> "InvisibleUnion1" [dir=none];
+"InvisibleUnion1" -> "Cunhada" [dir=none];
+"Falecido" -> "InvisibleUnion" [dir=none];
+"InvisibleUnion" -> "Conjuge" [dir=none];
+"InvisibleUnion" -> "Filho";
+"InvisibleUnion" -> "Filha";
+"Neto" -> "Bisneto" [label="filho"];
+"Filho" -> "Neto" [label="filho"];
+"InvisibleUnion1" -> "Sobrinho" [label="filho"];
+"Filha" -> "Neta" [label="filho"];
+}
